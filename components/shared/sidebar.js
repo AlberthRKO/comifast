@@ -17,13 +17,14 @@ import {
   RiSunLine,
   RiMoonLine,
 } from "react-icons/ri";
+import Header from "./header";
 
-const Sidebar = () => {
+const Sidebar = ({ toggleOrder, showOrder }) => {
   const [opennav, setOpennav] = useState(false);
 
   const toggle = () => {
     setOpennav(!opennav);
-    console.log(opennav);
+    // console.log(opennav);
   };
 
   // para asignar al elemento activo
@@ -119,7 +120,7 @@ const Sidebar = () => {
         </ul>
         <ul className="pl-4">
           <li className="lista">
-            <a onClick={() => {}}>
+            <a onClick={toggleOrder}>
               <RiLogoutCircleRLine className="icon" />
             </a>
           </li>
@@ -154,8 +155,18 @@ const Sidebar = () => {
         <button className="navLink">
           <RiUserLine className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
         </button>
-        <button className="navLink">
-          <RiPieChart2Line className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
+        {/* boton para abrir la orden */}
+        <button
+          onClick={toggleOrder}
+          className={`navLink ${
+            showOrder ? "shadow-blue-100 dark:shadow-[#ec7b6a3a]" : ""
+          }`}
+        >
+          {showOrder ? (
+            <RiCloseLine className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
+          ) : (
+            <RiPieChart2Line className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
+          )}
         </button>
       </nav>
     </>

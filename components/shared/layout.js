@@ -1,8 +1,14 @@
 import Head from "next/head";
-import React from "react";
+import Header from "./header";
 import Sidebar from "./sidebar";
 
-const Layout = ({ children, title = "", description = "" }) => {
+const Layout = ({
+  children,
+  title = "",
+  description = "",
+  toggleOrder,
+  showOrder,
+}) => {
   return (
     <>
       <Head>
@@ -11,7 +17,9 @@ const Layout = ({ children, title = "", description = "" }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
       </Head>
-      <Sidebar />
+      {/* pasamos los parametros del toogle para los icons */}
+      <Sidebar toggleOrder={toggleOrder} showOrder={showOrder} />
+      {/* <Header /> */}
       {children}
     </>
   );
