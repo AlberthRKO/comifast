@@ -23,7 +23,7 @@ const Layout = ({ children, title = "", description = "" }) => {
       </Head>
       {/* pasamos los parametros del toogle para los icons */}
       <Sidebar toggleOrder={toggleOrder} showOrder={showOrder} />
-      <div className="lg:pl-28 lg:flex transition-all">
+      <div className="min-h-screen lg:pl-28 lg:flex transition-all">
         <div
           className={`transition-all ${showOrder ? "lg:w-9/12" : "lg:w-full"}`}
         >

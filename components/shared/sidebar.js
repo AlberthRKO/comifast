@@ -12,10 +12,8 @@ import {
   RiLogoutCircleRLine,
   RiMenu2Fill,
   RiUserLine,
-  RiSearchLine,
+  RiCalendarTodoLine,
   RiCloseLine,
-  RiSunLine,
-  RiMoonLine,
 } from "react-icons/ri";
 import Header from "./header";
 
@@ -96,9 +94,9 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
               router.pathname === "/settings" ? "listaActiva" : "lista"
             }
           >
-            <Link href="/settings" legacyBehavior>
+            <Link href="/calendar" legacyBehavior>
               <a>
-                <RiSettings3Line className="icon" />
+                <RiCalendarTodoLine className="icon" />
               </a>
             </Link>
           </li>
