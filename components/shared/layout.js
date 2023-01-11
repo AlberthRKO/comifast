@@ -77,6 +77,8 @@ const Layout = ({ children, title = "", description = "" }) => {
                 <button
                   name="showSearch"
                   type="button"
+                  id="showSearch"
+                  aria-labelledby="showSearch"
                   className={`navLink lg:hidden ${
                     showSearch ? "shadow-blue-100 dark:shadow-[#ec7b6a3a]" : ""
                   }`}
@@ -103,8 +105,10 @@ const Layout = ({ children, title = "", description = "" }) => {
                 {/* Dark/ Light */}
                 {currentTheme === "dark" ? (
                   <button
-                    name="ligth"
+                    name="light"
                     type="button"
+                    id="lightTheme"
+                    aria-labelledby="lightTheme"
                     onClick={() => setTheme("light")}
                     className="navLink"
                   >
@@ -114,6 +118,8 @@ const Layout = ({ children, title = "", description = "" }) => {
                   <button
                     name="dark"
                     type="button"
+                    id="darkTheme"
+                    aria-labelledby="darkTheme"
                     onClick={() => setTheme("dark")}
                     className="navLink"
                   >
@@ -125,6 +131,8 @@ const Layout = ({ children, title = "", description = "" }) => {
                 <button
                   name="orders"
                   type="button"
+                  id="orders"
+                  aria-labelledby="orders"
                   className={`navLink hidden lg:block ${
                     showOrder ? "shadow-blue-100 dark:shadow-[#ec7b6a3a]" : ""
                   }`}

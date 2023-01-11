@@ -117,6 +117,8 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
         <button
           name="menu"
           type="button"
+          id="menu"
+          aria-labelledby="menu"
           onClick={toggle}
           className={`navLink ${
             opennav ? "shadow-blue-100 dark:shadow-[#ec7b6a3a]" : ""
@@ -129,7 +131,13 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
           )}
         </button>
 
-        <button name="profile" type="button" className="navLink">
+        <button
+          name="profile"
+          type="button"
+          id="user"
+          aria-labelledby="user"
+          className="navLink"
+        >
           <RiUserLine className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
         </button>
         <button name="profile" type="button" className="navLink">
@@ -139,6 +147,8 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
         <button
           name="Order"
           type="button"
+          id="order"
+          aria-labelledby="order"
           onClick={toggleOrder}
           className={`navLink ${
             showOrder ? "shadow-blue-100 dark:shadow-[#ec7b6a3a]" : ""
