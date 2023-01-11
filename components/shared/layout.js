@@ -43,6 +43,16 @@ const Layout = ({ children, title = "", description = "" }) => {
     return null;
   }
 
+  // Sacar fecha js
+  const fecha = new Date();
+  //   const fechaFormateada = fecha.toLocaleDateString("es-ES");
+  const fechaFormateada = fecha.toLocaleDateString("es-ES", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+  //   console.log(fechaFormateada);
+
   return (
     <>
       <Head>
@@ -70,7 +80,7 @@ const Layout = ({ children, title = "", description = "" }) => {
                 <div>
                   <h2 className="text-xl font-bold">{profile.name}</h2>
                   {/* <p className="text-gray-400">{fechaFormateada}</p> */}
-                  <p className="text-gray-400">{profile.email}</p>
+                  <p className="text-gray-600">{fechaFormateada}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">

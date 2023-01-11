@@ -84,7 +84,7 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
             }
           >
             <Link href="/notifications" legacyBehavior>
-              <a ria-label="notifications">
+              <a aria-label="notifications">
                 <RiNotification3Line className="icon" />
               </a>
             </Link>
@@ -95,7 +95,7 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
             }
           >
             <Link href="/calendar" legacyBehavior>
-              <a ria-label="calendar">
+              <a aria-label="calendar">
                 <RiCalendarTodoLine className="icon" />
               </a>
             </Link>
