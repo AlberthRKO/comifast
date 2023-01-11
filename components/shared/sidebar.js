@@ -80,7 +80,7 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
           </li>
           <li
             className={
-              router.pathname === "/notification" ? "listaActiva" : "lista"
+              router.pathname === "/notifications" ? "listaActiva" : "lista"
             }
           >
             <Link href="/notifications" legacyBehavior>
@@ -91,7 +91,7 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
           </li>
           <li
             className={
-              router.pathname === "/settings" ? "listaActiva" : "lista"
+              router.pathname === "/calendar" ? "listaActiva" : "lista"
             }
           >
             <Link href="/calendar" legacyBehavior>
