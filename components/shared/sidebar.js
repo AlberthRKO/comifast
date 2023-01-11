@@ -30,21 +30,6 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
   // para asignar al elemento activo
   const router = useRouter();
 
-  // Seccion de darkmode
-  const [mounted, setMounted] = useState(false);
-  const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
-
-  // arreglando el problema del doble renderizado
-  // useEffect only runs on the client, so now we can safely show the UI
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
   return (
     <>
       {/* Sidebar */}
@@ -120,9 +105,11 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
         </ul>
         <ul className="pl-4">
           <li className="lista">
-            <a onClick={toggleOrder}>
-              <RiLogoutCircleRLine className="icon" />
-            </a>
+            <Link href="#" legacyBehavior>
+              <a>
+                <RiLogoutCircleRLine className="icon" />
+              </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -142,16 +129,9 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
           )}
         </button>
 
-        {currentTheme === "dark" ? (
-          <button onClick={() => setTheme("light")} className="navLink">
-            <RiSunLine className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
-          </button>
-        ) : (
-          <button onClick={() => setTheme("dark")} className="navLink">
-            <RiMoonLine className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
-          </button>
-        )}
-
+        <button className="navLink">
+          <RiUserLine className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
+        </button>
         <button className="navLink">
           <RiUserLine className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
         </button>
