@@ -75,10 +75,9 @@ const Layout = ({ children, title = "", description = "" }) => {
               </div>
               <div className="flex items-center gap-2">
                 <button
-                  name="showSearch"
-                  type="button"
-                  id="showSearch"
-                  aria-labelledby="showSearch"
+                  aria-labelledby="search"
+                  aria-label="search"
+                  role="button"
                   className={`navLink lg:hidden ${
                     showSearch ? "shadow-blue-100 dark:shadow-[#ec7b6a3a]" : ""
                   }`}
@@ -105,10 +104,9 @@ const Layout = ({ children, title = "", description = "" }) => {
                 {/* Dark/ Light */}
                 {currentTheme === "dark" ? (
                   <button
-                    name="light"
-                    type="button"
-                    id="lightTheme"
-                    aria-labelledby="lightTheme"
+                    aria-labelledby="light"
+                    aria-label="light"
+                    role="button"
                     onClick={() => setTheme("light")}
                     className="navLink"
                   >
@@ -116,10 +114,9 @@ const Layout = ({ children, title = "", description = "" }) => {
                   </button>
                 ) : (
                   <button
-                    name="dark"
-                    type="button"
-                    id="darkTheme"
-                    aria-labelledby="darkTheme"
+                    aria-labelledby="dark"
+                    aria-label="dark"
+                    role="button"
                     onClick={() => setTheme("dark")}
                     className="navLink"
                   >
@@ -129,10 +126,9 @@ const Layout = ({ children, title = "", description = "" }) => {
 
                 {/* Show order */}
                 <button
-                  name="orders"
-                  type="button"
-                  id="orders"
                   aria-labelledby="orders"
+                  aria-label="orders"
+                  role="button"
                   className={`navLink hidden lg:block ${
                     showOrder ? "shadow-blue-100 dark:shadow-[#ec7b6a3a]" : ""
                   }`}

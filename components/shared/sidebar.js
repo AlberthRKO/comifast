@@ -115,10 +115,9 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
       <nav className="bg-white dark:bg-[#282637] mx-4 fixed bottom-5 right-0 left-0 px-4 py-3 rounded-3xl flex justify-around shadow-lg dark:shadow-gray-900 dark:border-t-[1px] dark:border-[#242231] lg:hidden">
         {/* reutilzidando coidog del sidebar */}
         <button
-          name="menu"
-          type="button"
-          id="menu"
           aria-labelledby="menu"
+          aria-label="menu"
+          role="button"
           onClick={toggle}
           className={`navLink ${
             opennav ? "shadow-blue-100 dark:shadow-[#ec7b6a3a]" : ""
@@ -132,23 +131,26 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
         </button>
 
         <button
-          name="profile"
-          type="button"
-          id="user"
-          aria-labelledby="user"
+          aria-labelledby="profile"
+          aria-label="profile"
+          role="button"
           className="navLink"
         >
           <RiUserLine className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
         </button>
-        <button name="profile" type="button" className="navLink">
+        <button
+          aria-labelledby="profile"
+          aria-label="profile"
+          role="button"
+          className="navLink"
+        >
           <RiUserLine className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
         </button>
         {/* boton para abrir la orden */}
         <button
-          name="Order"
-          type="button"
-          id="order"
           aria-labelledby="order"
+          aria-label="order"
+          role="button"
           onClick={toggleOrder}
           className={`navLink ${
             showOrder ? "shadow-blue-100 dark:shadow-[#ec7b6a3a]" : ""
