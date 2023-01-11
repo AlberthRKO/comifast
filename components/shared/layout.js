@@ -75,6 +75,8 @@ const Layout = ({ children, title = "", description = "" }) => {
               </div>
               <div className="flex items-center gap-2">
                 <button
+                  name="showSearch"
+                  type="button"
                   className={`navLink lg:hidden ${
                     showSearch ? "shadow-blue-100 dark:shadow-[#ec7b6a3a]" : ""
                   }`}
@@ -100,17 +102,29 @@ const Layout = ({ children, title = "", description = "" }) => {
 
                 {/* Dark/ Light */}
                 {currentTheme === "dark" ? (
-                  <button onClick={() => setTheme("light")} className="navLink">
+                  <button
+                    name="ligth"
+                    type="button"
+                    onClick={() => setTheme("light")}
+                    className="navLink"
+                  >
                     <RiSunLine className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
                   </button>
                 ) : (
-                  <button onClick={() => setTheme("dark")} className="navLink">
+                  <button
+                    name="dark"
+                    type="button"
+                    onClick={() => setTheme("dark")}
+                    className="navLink"
+                  >
                     <RiMoonLine className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
                   </button>
                 )}
 
                 {/* Show order */}
                 <button
+                  name="orders"
+                  type="button"
                   className={`navLink hidden lg:block ${
                     showOrder ? "shadow-blue-100 dark:shadow-[#ec7b6a3a]" : ""
                   }`}

@@ -38,7 +38,7 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
       >
         <ul className="pl-3 sm:pl-4">
           <li>
-            <Link href="/">
+            <Link aria-label="home" href="/">
               <span>
                 <Image
                   className="text-center mx-auto mb-4"
@@ -53,7 +53,7 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
           </li>
           <li className={router.pathname === "/" ? "listaActiva" : "lista"}>
             <Link href="/" legacyBehavior>
-              <a>
+              <a aria-label="home">
                 <RiHome5Line className="icon" />
               </a>
             </Link>
@@ -62,7 +62,7 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
             className={router.pathname === "/orders" ? "listaActiva" : "lista"}
           >
             <Link href="/orders" legacyBehavior>
-              <a>
+              <a aria-label="orders">
                 <RiPieChart2Line className="icon" />
               </a>
             </Link>
@@ -73,7 +73,7 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
             }
           >
             <Link href="/messages" legacyBehavior>
-              <a>
+              <a aria-label="messages">
                 <RiMailLine className="icon" />
               </a>
             </Link>
@@ -84,7 +84,7 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
             }
           >
             <Link href="/notifications" legacyBehavior>
-              <a>
+              <a ria-label="notifications">
                 <RiNotification3Line className="icon" />
               </a>
             </Link>
@@ -95,7 +95,7 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
             }
           >
             <Link href="/calendar" legacyBehavior>
-              <a>
+              <a ria-label="calendar">
                 <RiCalendarTodoLine className="icon" />
               </a>
             </Link>
@@ -104,7 +104,7 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
         <ul className="pl-4">
           <li className="lista">
             <Link href="#" legacyBehavior>
-              <a>
+              <a aria-label="Logout">
                 <RiLogoutCircleRLine className="icon" />
               </a>
             </Link>
@@ -115,6 +115,8 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
       <nav className="bg-white dark:bg-[#282637] mx-4 fixed bottom-5 right-0 left-0 px-4 py-3 rounded-3xl flex justify-around shadow-lg dark:shadow-gray-900 dark:border-t-[1px] dark:border-[#242231] lg:hidden">
         {/* reutilzidando coidog del sidebar */}
         <button
+          name="menu"
+          type="button"
           onClick={toggle}
           className={`navLink ${
             opennav ? "shadow-blue-100 dark:shadow-[#ec7b6a3a]" : ""
@@ -127,14 +129,16 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
           )}
         </button>
 
-        <button className="navLink">
+        <button name="profile" type="button" className="navLink">
           <RiUserLine className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
         </button>
-        <button className="navLink">
+        <button name="profile" type="button" className="navLink">
           <RiUserLine className="text-xl text-[#012970] dark:text-[#ec7c6a]" />
         </button>
         {/* boton para abrir la orden */}
         <button
+          name="Order"
+          type="button"
           onClick={toggleOrder}
           className={`navLink ${
             showOrder ? "shadow-blue-100 dark:shadow-[#ec7b6a3a]" : ""
