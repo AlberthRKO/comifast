@@ -105,7 +105,7 @@ const Layout = ({ children, title = "", description = "" }) => {
                     <RiSearchLine className="text-gray-600 absolute text-md left-2 top-1/2 -translate-y-1/2  cursor-pointer group-focus-within:font-bold" />
                     <input
                       placeholder="Search"
-                      className="w-full outline-none shadow-md rounded-lg py-2 pl-8 pr-2 bg-[#f6f9ff] dark:bg-[#262837] focus:shadow-blue-100 focus:dark:shadow-[#ec7b6a3a] "
+                      className="w-full outline-none shadow-md rounded-lg py-2 pl-8 pr-2 bg-[#f6f9ff] dark:bg-[#252837] focus:shadow-blue-100 focus:dark:shadow-[#ec7b6a3a] "
                       type="text"
                     />
                   </div>
@@ -162,7 +162,7 @@ const Layout = ({ children, title = "", description = "" }) => {
                 <RiSearchLine className="text-gray-600 absolute text-md left-2 top-1/2 -translate-y-1/2  cursor-pointer group-focus-within:font-bold" />
                 <input
                   placeholder="Search"
-                  className="w-full outline-none shadow-md rounded-lg py-2 pl-8 pr-2 bg-[#f6f9ff] dark:bg-[#262837] focus:shadow-blue-100 focus:dark:shadow-[#ec7b6a3a] "
+                  className="w-full outline-none shadow-md rounded-lg py-2 pl-8 pr-2 bg-[#f6f9ff] dark:bg-[#252837] focus:shadow-blue-100 focus:dark:shadow-[#ec7b6a3a] "
                   type="text"
                 />
               </div>
