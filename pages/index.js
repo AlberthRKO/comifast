@@ -1,19 +1,24 @@
 import Layout from "../components/shared/layout";
 import FlipMove from "react-flip-move";
-import { Tab } from "@headlessui/react";
-import { categories } from "../utils/data";
+import { Listbox, Tab, Transition } from "@headlessui/react";
+import { categories, tables } from "../utils/data";
 import Card from "../components/card";
+import { Fragment, useState } from "react";
+import ListaBox from "../components/listaBox";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Home() {
+  // estado del valor seleccionado para las mesas
+  const [selected, setSelected] = useState(
+    tables.find((table) => table.available)
+  );
   return (
     <>
       <Layout title="Order" description="ComiFast for order section">
         {/* Inicio del contenido dashboard */}
-
         {/* Nav para los tipos de comida usando tabs */}
         <nav className="w-full pb-3 rounded-md">
           {/* usando headlessui */}
@@ -27,7 +32,7 @@ export default function Home() {
                     classNames(
                       "capitalize navLink font-semibold py-1 px-4 mb-5 focus-visible:outline-none",
                       selected
-                        ? "text-[#012970] dark:text-[#ec7c6a] font-bold shadow-blue-100 dark:shadow-[#ec7b6a3a]"
+                        ? "text-[#012970] dark:text-[#ec7c6a] text-title shadow-blue-100 dark:shadow-[#ec7b6a3a]"
                         : ""
                     )
                   }
@@ -38,12 +43,21 @@ export default function Home() {
             </Tab.List>
             {/* Seccion de contenido de tabs */}
             <Tab.Panels>
+              <div className="flex items-center justify-between pt-5 pb-2">
+                <h2 className=" text-2xl text-title">Choose Dishes</h2>
+                {/* Lista de mesas */}
+                <ListaBox
+                  selected={selected}
+                  setSelected={setSelected}
+                  lists={tables}
+                />
+              </div>
               {Object.values(categories).map((dishes, index) => (
-                <Tab.Panel key={index} className="flex gap-5">
+                <Tab.Panel key={index} className="flex flex-row flex-wrap">
                   {/* Contenido del tab */}
                   {dishes.map((dishe) => (
                     // item
-                    <Card key={dishe.key} dishe={dishe} />
+                    <Card key={dishe.id} dishe={dishe} />
                   ))}
                 </Tab.Panel>
               ))}
@@ -51,10 +65,10 @@ export default function Home() {
           </Tab.Group>
         </nav>
 
-        <h2 className="text-xl text-center text-[#012970] dark:text-white font-bold">
+        <h2 className="text-xl text-center text-section hidden">
           Seccion de Dashboard
         </h2>
-        <p className="mt-3">
+        <p className="mt-3 hidden">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
           inventore aperiam optio natus, non labore necessitatibus beatae totam
           tempore delectus exercitationem. Consequatur sint dignissimos

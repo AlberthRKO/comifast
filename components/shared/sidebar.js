@@ -112,7 +112,7 @@ const Sidebar = ({ toggleOrder, showOrder }) => {
         </ul>
       </div>
       {/* Sidebar collapse nav mobile */}
-      <nav className="bg-white dark:bg-[#282637] mx-4 fixed bottom-5 right-0 left-0 px-4 py-3 rounded-3xl flex justify-around shadow-lg dark:shadow-gray-900 dark:border-t-[1px] dark:border-[#242231] lg:hidden">
+      <nav className="bg-white dark:bg-[#282637] mx-4 fixed z-50 bottom-5 right-0 left-0 px-4 py-3 rounded-3xl flex justify-around shadow-lg dark:shadow-gray-900 dark:border-t-[1px] dark:border-[#242231] lg:hidden">
         {/* reutilzidando coidog del sidebar */}
         <button
           aria-labelledby="menu"
