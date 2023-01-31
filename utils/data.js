@@ -1,5 +1,5 @@
 const profile = {
-  name: "Alberth Paredes",
+  name: "Jeager Paredes",
   email: "orlando.alb77@gmail.com",
   imgUrl: "/alberth.svg",
 };
@@ -90,11 +90,16 @@ const categories = {
 };
 
 const tables = [
-  { name: "Table 1", id: "1", available: true },
-  { name: "Table 2", id: "2", available: false },
-  { name: "Table 3", id: "3", available: true },
-  { name: "Table 4", id: "4", available: false },
-  { name: "Table 5", id: "5", available: true },
-  { name: "Table 6", id: "6", available: true },
+  { name: "Table 1", id: 1, available: true },
+  { name: "Table 2", id: 2, available: false },
+  { name: "Table 3", id: 3, available: true },
+  { name: "Table 4", id: 4, available: false },
+  { name: "Table 5", id: 5, available: true },
+  { name: "Table 6", id: 6, available: true },
 ];
-export { profile, userNavigation, categories, tables };
+const orderTypes = [
+  { name: "Dine In", id: 1, available: true },
+  { name: "To go", id: 2, available: true },
+];
+
+export { profile, userNavigation, categories, tables, orderTypes };

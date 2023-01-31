@@ -6,6 +6,10 @@ body {
   background-color: #f6f9ff;
 } */
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 @layer base {
   body {
     @apply bg-[#f6f9ff] text-gray-900 dark:bg-[#252837] dark:text-gray-100;
@@ -27,12 +31,17 @@ body {
   .navLink {
     @apply bg-white dark:bg-[#252837] shadow-lg shadow-[#00000010] hover:shadow-blue-100 dark:shadow-[#191f2cd3] hover:dark:shadow-[#ec7b6a3a] p-3 flex rounded-lg;
   }
+
+  .card-form {
+    @apply outline-none  rounded-lg py-2 px-3 bg-[#f6f9ff] dark:bg-[#252837] focus:shadow-md focus:shadow-blue-100 focus:dark:shadow-[#ec7b6a3a];
+  }
+
   /* hover:dark:shadow-[#ec7b6a3a] */
   .lista .icon {
     @apply text-3xl mx-auto text-[#012970] dark:text-[#ec7c6a];
   }
   .text-title {
-    @apply text-[#012970] dark:text-[#ec7c6a] font-bold;
+    @apply text-[#012970] dark:text-[#ec7c6a] font-[600];
   }
   /* #012970 */
   .bg-card {
@@ -43,6 +52,9 @@ body {
     transform: translateY(-10px);
     box-shadow: 0px 10px 13px -7px rgba(0, 0, 0, 0.1);
   }
+  .bg-card3 {
+    @apply bg-white dark:bg-[#1F1D2B];
+  }
   .bg-card2 {
     @apply bg-white dark:bg-[#252837] shadow-lg hover:shadow-blue-100 dark:shadow-[#111827d3];
   }
@@ -50,7 +62,14 @@ body {
     @apply bg-white dark:bg-[#252837] shadow-lg shadow-[#00000010] hover:shadow-blue-100 dark:shadow-[#191f2cd3] hover:dark:shadow-[#191f2ce1] p-3 flex rounded-lg;
   }
   .text-section {
-    @apply text-[#012970] dark:text-white font-bold;
+    @apply text-[#012970] dark:text-white font-[600];
+  }
+
+  .btn-delete {
+    @apply rounded-lg border-[#E87C68] border-[1px] p-2 text-[#E87C68] hover:bg-[#E87C68] hover:text-white active:bg-[#E87C68] active:text-white;
+  }
+  .btn-edit {
+    @apply rounded-lg border-[#5a6ba5] border-[1px] p-2 text-[#5a6ba5] hover:bg-[#5a6ba5] hover:text-white active:bg-[#5a6ba5] active:text-white;
   }
 }
 

@@ -1,5 +1,4 @@
 import Layout from "../components/shared/layout";
-import FlipMove from "react-flip-move";
 import { Listbox, Tab, Transition } from "@headlessui/react";
 import { categories, tables } from "../utils/data";
 import Card from "../components/card";
@@ -53,7 +52,10 @@ export default function Home() {
                 />
               </div>
               {Object.values(categories).map((dishes, index) => (
-                <Tab.Panel key={index} className="flex flex-row flex-wrap">
+                <Tab.Panel
+                  key={index}
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"
+                >
                   {/* Contenido del tab */}
                   {dishes.map((dishe) => (
                     // item
@@ -64,16 +66,6 @@ export default function Home() {
             </Tab.Panels>
           </Tab.Group>
         </nav>
-
-        <h2 className="text-xl text-center text-section hidden">
-          Seccion de Dashboard
-        </h2>
-        <p className="mt-3 hidden">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-          inventore aperiam optio natus, non labore necessitatibus beatae totam
-          tempore delectus exercitationem. Consequatur sint dignissimos
-          voluptatem eligendi dolorem odit distinctio officiis.
-        </p>
       </Layout>
     </>
   );

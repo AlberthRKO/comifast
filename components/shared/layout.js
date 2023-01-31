@@ -169,7 +169,7 @@ const Layout = ({ children, title = "", description = "" }) => {
             </form>
           </header>
           {/* seccion para escribir todo */}
-          <main className="p-4">{children}</main>
+          <main className="p-4 pb-24 lg:pb-4">{children}</main>
         </div>
         <Order showOrder={showOrder} />
       </div>
