@@ -1,5 +1,5 @@
 const profile = {
-  name: "Jeager Paredes",
+  name: "Alberth Paredes",
   email: "orlando.alb77@gmail.com",
   imgUrl: "/alberth.svg",
 };
@@ -10,6 +10,34 @@ const userNavigation = [
 ];
 const categories = {
   broaster: [
+    {
+      id: 1,
+      title: "Cheap chicken",
+      price: 25.99,
+      stock: 20,
+      img: "/img/grill1.png",
+    },
+    {
+      id: 2,
+      title: "Quarter chicken",
+      price: 40.99,
+      stock: 13,
+      img: "/img/dish2.png",
+    },
+    {
+      id: 3,
+      title: "Cheap chicken",
+      price: 32.99,
+      stock: 10,
+      img: "/img/grill1.png",
+    },
+    {
+      id: 4,
+      title: "Whole chicken",
+      price: 45.99,
+      stock: 18,
+      img: "/img/dish.png",
+    },
     {
       id: 1,
       title: "Cheap chicken",

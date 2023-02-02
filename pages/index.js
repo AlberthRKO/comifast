@@ -29,7 +29,7 @@ export default function Home() {
                   key={category}
                   className={({ selected }) =>
                     classNames(
-                      "capitalize navLink font-semibold py-1 px-4 mb-5 focus-visible:outline-none",
+                      "capitalize navLink font-semibold text-sm md:text-base py-1 px-4 mb-5 focus-visible:outline-none",
                       selected
                         ? "text-[#012970] dark:text-[#ec7c6a] text-title shadow-blue-100 dark:shadow-[#ec7b6a3a]"
                         : ""
@@ -43,7 +43,9 @@ export default function Home() {
             {/* Seccion de contenido de tabs */}
             <Tab.Panels>
               <div className="flex items-center justify-between pt-5 pb-2">
-                <h2 className=" text-2xl text-title">Choose Dishes</h2>
+                <h2 className=" text-xl md:text-2xl text-title">
+                  Choose Dishes
+                </h2>
                 {/* Lista de mesas */}
                 <ListaBox
                   selected={selected}

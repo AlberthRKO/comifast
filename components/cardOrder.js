@@ -4,7 +4,7 @@ import { RiEditLine, RiDeleteBin6Line } from "react-icons/ri";
 
 const CardOrder = ({ dishe }) => {
   return (
-    <div className="bg-card3 hover:translate-y-0 rounded-lg py-4 px-3 mt-4 shadow-lg">
+    <div className="bg-card3 hover:translate-y-0 rounded-lg py-4 px-3 mb-4 shadow-lg">
       <div className="flex gap-2 items-center">
         <div className="flex-auto overflow-ellipsis flex gap-2 items-center">
           <div className="overflow-hidden rounded-full">
@@ -34,7 +34,7 @@ const CardOrder = ({ dishe }) => {
           role="button"
           className="btn-edit"
         >
-          <RiEditLine className="text-xl" />
+          <RiEditLine className="text-base sm:text-lg md:text-xl" />
         </button>
         <div className="flex-auto">
           <input
@@ -49,7 +49,7 @@ const CardOrder = ({ dishe }) => {
           role="button"
           className="btn-delete"
         >
-          <RiDeleteBin6Line className="text-xl" />
+          <RiDeleteBin6Line className="text-base sm:text-lg md:text-xl" />
         </button>
       </div>
     </div>

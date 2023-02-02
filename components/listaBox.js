@@ -6,8 +6,10 @@ const ListaBox = ({ selected, setSelected, lists }) => {
   return (
     <Listbox value={selected} onChange={setSelected}>
       <div className="relative z-10">
-        <Listbox.Button className="relative button items-center gap-2 w-32 justify-center">
-          <span className="text-title">{selected.name}</span>
+        <Listbox.Button className="relative button items-center gap-2 w-28 justify-center">
+          <span className="text-title text-sm md:text-base">
+            {selected.name}
+          </span>
           <RiArrowDownSLine className="text-title h-4 w-4" aria-hidden="true" />
         </Listbox.Button>
         <Transition
@@ -32,13 +34,15 @@ const ListaBox = ({ selected, setSelected, lists }) => {
                   {({ selected }) => (
                     <>
                       {selected ? (
-                        <span className="text-title absolute left-2 inset-y-0 flex items-center">
+                        <span className="text-title absolute left-3 md:left-2 inset-y-0 flex items-center">
                           <RiTableLine />
                         </span>
                       ) : null}
                       <span
                         className={`truncate ${
-                          selected ? "text-title" : "font-normal"
+                          selected
+                            ? "text-title text-sm md:text-base"
+                            : "font-normal text-sm md:text-base"
                         }`}
                       >
                         {list.name}
